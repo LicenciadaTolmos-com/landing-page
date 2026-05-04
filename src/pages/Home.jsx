@@ -2,7 +2,10 @@ import Hero from "../components/Hero";
 import Services from "../components/Services";
 import About from "../components/About";
 import Doctors from "../components/Doctors";
+import Faq from "../components/Faq";
 import WhyChoose from "../components/WhyChoose";
+
+const SHOW_PROFESSIONALS = false;
 
 function Home() {
   return (
@@ -10,8 +13,9 @@ function Home() {
       <Hero />
       <Services />
       <About />
-      <Doctors />
+      {SHOW_PROFESSIONALS && <Doctors />}
       <WhyChoose/>
+      <Faq />
     </>
   );
 }
