@@ -4,13 +4,15 @@ import About from "../components/About";
 import Doctors from "../components/Doctors";
 import WhyChoose from "../components/WhyChoose";
 
+const SHOW_PROFESSIONALS = false;
+
 function Home() {
   return (
     <>
       <Hero />
       <Services />
       <About />
-      <Doctors />
+      {SHOW_PROFESSIONALS && <Doctors />}
       <WhyChoose/>
     </>
   );

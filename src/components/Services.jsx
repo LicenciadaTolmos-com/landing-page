@@ -2,36 +2,33 @@ import React from "react";
 
 const services = [
   {
-    title: "Online Consultation",
-    description: "Talk to doctors from your home anytime.",
+    title: "Administración de tratamiento endovenoso, intramuscular y subcutáneo",
+    description: "Aplicación segura de medicamentos según indicación médica.",
   },
   {
-    title: "Health Checkups",
-    description: "Regular medical checkups for better health.",
+    title: "Control de funciones vitales",
+    description: "Monitoreo de presión, pulso, temperatura y oxigenación.",
   },
   {
-    title: "Emergency Care",
-    description: "24/7 emergency support from professionals.",
+    title: "Curación de lesiones por presión",
+    description: "Tratamiento y cuidado de escaras para una mejor recuperación.",
   },
   {
-    title: "Specialist Doctors",
-    description: "Consult experienced specialist doctors.",
+    title: "Colocación de sonda nasogástrica",
+    description: "Procedimiento profesional para alimentación o drenaje.",
   },
   {
-    title: "Lab Tests",
-    description: "Book medical lab tests easily online.",
+    title: "Curación de heridas y ostomías",
+    description: "Limpieza, cuidado y seguimiento especializado de heridas y ostomías.",
   },
-  {
-    title: "Medicine Delivery",
-    description: "Get medicines delivered to your home.",
-  },
+
 ];
 
 const Services = () => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-10">Our Services</h2>
+        <h2 className="text-3xl font-bold mb-10">Nuestros servicios</h2>
 
         <div className="grid md:grid-cols-3 gap-6">
           {services.map((service, index) => (

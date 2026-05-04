@@ -7,22 +7,22 @@ function Doctors() {
   const doctors = [
     {
       name: "Dr. Rahul Sharma",
-      specialty: "Cardiologist",
-      experience: "10+ Years Experience",
+      specialty: "Cardiólogo",
+      experience: "Más de 10 años de experiencia",
       rating: "4.8",
       image: "https://randomuser.me/api/portraits/men/32.jpg",
     },
     {
       name: "Dr. Priya Patel",
-      specialty: "Dermatologist",
-      experience: "8+ Years Experience",
+      specialty: "Dermatóloga",
+      experience: "Más de 8 años de experiencia",
       rating: "4.7",
       image: "https://randomuser.me/api/portraits/women/44.jpg",
     },
     {
       name: "Dr. Arjun Reddy",
-      specialty: "General Physician",
-      experience: "12+ Years Experience",
+      specialty: "Médico general",
+      experience: "Más de 12 años de experiencia",
       rating: "4.9",
       image: "https://randomuser.me/api/portraits/men/75.jpg",
     },
@@ -36,35 +36,29 @@ function Doctors() {
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
-
         <h2 className="text-3xl font-bold text-center mb-8">
-          Our Doctors
+          Nuestros profesionales
         </h2>
 
-        {/* Search Bar */}
         <div className="max-w-md mx-auto mb-10">
           <input
             type="text"
-            placeholder="Search doctor or specialty..."
+            placeholder="Buscar profesional o especialidad..."
             className="w-full border p-3 rounded-lg"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
 
-        {/* Doctors Grid */}
         <div className="grid md:grid-cols-3 gap-8">
-
           {filteredDoctors.map((doc, index) => (
-
             <div
               key={index}
               className="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition"
             >
-
               <img
                 src={doc.image}
-                alt={doc.name}
+                alt={`Foto de ${doc.name}`}
                 className="w-32 h-32 mx-auto rounded-full object-cover mb-4"
               />
 
@@ -81,19 +75,16 @@ function Doctors() {
               </p>
 
               <p className="text-yellow-500 mb-4">
-                ⭐ {doc.rating}
+                &#9733; {doc.rating}
               </p>
 
               <Link to={`/appointment?doctor=${encodeURIComponent(doc.name)}`}>
                 <button className="bg-green-600 text-white px-4 py-2 rounded-lg">
-                  Book Appointment
+                  Reservar cita
                 </button>
               </Link>
-
             </div>
-
           ))}
-
         </div>
       </div>
     </section>

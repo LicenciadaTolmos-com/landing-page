@@ -1,20 +1,20 @@
 function WhyChoose() {
   const features = [
     {
-      title: "Experienced Doctors",
-      desc: "Our doctors have 10+ years of experience in their fields.",
+      title: "Atención profesional certificada",
+      desc: "Licenciada en enfermería con experiencia hospitalaria y especialización en cuidados avanzados",
     },
     {
-      title: "24/7 Support",
-      desc: "Our medical team is available anytime for emergencies.",
+      title: "Seguridad y confianza",
+      desc: "Cumplimos protocolos estrictos de bioseguridad en cada procedimiento.",
     },
     {
-      title: "Online Consultation",
-      desc: "Consult doctors from home through video appointments.",
+      title: "Atención a domicilio",
+      desc: "Recibes cuidado profesional sin salir de casa, con comodidad y puntualidad.",
     },
     {
-      title: "Advanced Equipment",
-      desc: "We use modern medical technology for better treatment.",
+      title: "Enfoque humano y personalizado",
+      desc: "Tratamos a cada paciente con empatía, seguimiento y dedicación continua.",
     },
   ];
 
@@ -23,7 +23,7 @@ function WhyChoose() {
       <div className="max-w-7xl mx-auto px-6">
 
         <h2 className="text-3xl font-bold text-center mb-12">
-          Why Choose Chikitsa
+          Por qué elegir LicenciadaTolmos
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

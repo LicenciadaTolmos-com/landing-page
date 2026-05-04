@@ -1,5 +1,7 @@
 
 
+const SHOW_HERO_ACTIONS = false;
+
 export default function Hero() {
   return (
     <section className="bg-green-50">
@@ -7,26 +9,32 @@ export default function Hero() {
 
         <div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-800 leading-tight">
-            Your Health, Our Priority
+            Tu salud, es mi prioridad
           </h1>
 
           <p className="mt-4 text-gray-600 text-lg">
-            Connect with trusted doctors and get expert medical advice anytime, anywhere.
+            Licenciada en enfermería con amplia experiencia en hospitalización y cuidados especializados, enfocada en la atención segura y personalizada del paciente. Especialista en manejo avanzado de heridas y ostomías, con formación continua en bioseguridad, control de infecciones y procedimientos clínicos, brindando servicios profesionales a domicilio con responsabilidad y calidad.
           </p>
 
-          <div className="mt-6 flex gap-4">
-            <button className="bg-green-600 text-white px-6 py-3 rounded-lg shadow hover:shadow-lg transition hover:bg-green-700">
-              Ask a Doctor
-            </button>
+          {SHOW_HERO_ACTIONS && (
+            <div className="mt-6 flex gap-4">
+              <button className="bg-green-600 text-white px-6 py-3 rounded-lg shadow hover:shadow-lg transition hover:bg-green-700">
+                Consultar ahora
+              </button>
 
-            <button className="border border-gray-300 px-6 py-3 rounded-lg hover:bg-gray-100">
-              Book Appointment
-            </button>
-          </div>
+              <button className="border border-gray-300 px-6 py-3 rounded-lg hover:bg-gray-100">
+                Reservar cita
+              </button>
+            </div>
+          )}
         </div>
 
-        <div>
-          <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54" className="rounded-2xl shadow-xl"/>
+        <div className="flex justify-center md:justify-end">
+          <img
+            src="/home3.png"
+            alt="LicenciadaTolmos con uniforme de enfermera"
+            className="h-[560px] w-full max-w-[520px] rounded-2xl object-cover object-top shadow-xl md:h-[680px]"
+          />
         </div>
 
       </div>

@@ -7,20 +7,20 @@ function Appointment() {
 
   return (
     <div className="p-10 text-center">
-      <h1 className="text-3xl font-bold">Book Appointment</h1>
+      <h1 className="text-3xl font-bold">Reservar cita</h1>
 
       <form className="flex flex-col gap-4 max-w-md mx-auto mt-6">
-        <input className="border p-2" placeholder="Name" />
-        <input className="border p-2" placeholder="Phone" />
+        <input className="border p-2" placeholder="Nombre" />
+        <input className="border p-2" placeholder="Teléfono" />
         <input
           className="border p-2"
-          placeholder="Doctor"
+          placeholder="Profesional"
           defaultValue={doctor}
         />
         <input className="border p-2" type="date" />
 
         <button className="bg-blue-500 text-white p-2">
-          Book Appointment
+          Reservar cita
         </button>
       </form>
     </div>
