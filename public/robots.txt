@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /appointment
+Disallow: /doctors
+
+Sitemap: https://licenciadatolmos.com/sitemap.xml
+Host: licenciadatolmos.com

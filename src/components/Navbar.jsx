@@ -8,8 +8,11 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 py-4 grid grid-cols-[1fr_auto] md:grid-cols-[1fr_auto_1fr] items-center">
+    <header className="sticky top-0 z-50 bg-white shadow-sm">
+      <nav
+        className="max-w-7xl mx-auto px-6 py-4 grid grid-cols-[1fr_auto] md:grid-cols-[1fr_auto_1fr] items-center"
+        aria-label="Navegacion principal"
+      >
         <Link to="/" className="justify-self-start">
           <h1 className="text-2xl font-bold text-green-600">
             LicenciadaTolmos
@@ -28,11 +31,11 @@ export default function Navbar() {
           )}
 
           <li className="hover:text-green-600">
-            <Link to="/services">Servicios</Link>
+            <Link to="/servicios">Servicios</Link>
           </li>
 
           <li className="hover:text-green-600">
-            <Link to="/contact">Contacto</Link>
+            <Link to="/contacto">Contacto</Link>
           </li>
         </ul>
 
@@ -52,7 +55,7 @@ export default function Navbar() {
         >
           &#9776;
         </button>
-      </div>
+      </nav>
 
       {menuOpen && (
         <div className="md:hidden bg-white px-6 pb-4">
@@ -68,11 +71,11 @@ export default function Navbar() {
             )}
 
             <li>
-              <Link to="/services" onClick={() => setMenuOpen(false)}>Servicios</Link>
+              <Link to="/servicios" onClick={() => setMenuOpen(false)}>Servicios</Link>
             </li>
 
             <li>
-              <Link to="/contact" onClick={() => setMenuOpen(false)}>Contacto</Link>
+              <Link to="/contacto" onClick={() => setMenuOpen(false)}>Contacto</Link>
             </li>
 
             {SHOW_CONSULT_BUTTON && (
@@ -87,6 +90,6 @@ export default function Navbar() {
           </ul>
         </div>
       )}
-    </nav>
+    </header>
   );
 }

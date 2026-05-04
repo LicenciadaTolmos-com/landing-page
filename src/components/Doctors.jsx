@@ -59,6 +59,8 @@ function Doctors() {
               <img
                 src={doc.image}
                 alt={`Foto de ${doc.name}`}
+                loading="lazy"
+                decoding="async"
                 className="w-32 h-32 mx-auto rounded-full object-cover mb-4"
               />
 
