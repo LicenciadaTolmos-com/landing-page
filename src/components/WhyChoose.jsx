@@ -1,39 +1,36 @@
 function WhyChoose() {
   const features = [
     {
-      title: "Experienced Doctors",
-      desc: "Our doctors have 10+ years of experience in their fields.",
+      title: "Atención profesional certificada",
+      desc: "Licenciada en enfermería con experiencia hospitalaria y especialización en cuidados avanzados.",
     },
     {
-      title: "24/7 Support",
-      desc: "Our medical team is available anytime for emergencies.",
+      title: "Seguridad y confianza",
+      desc: "Protocolos de bioseguridad, técnica limpia y cuidado responsable en cada procedimiento.",
     },
     {
-      title: "Online Consultation",
-      desc: "Consult doctors from home through video appointments.",
+      title: "Atención a domicilio",
+      desc: "Cuidado profesional en casa para pacientes que necesitan comodidad, puntualidad y seguimiento.",
     },
     {
-      title: "Advanced Equipment",
-      desc: "We use modern medical technology for better treatment.",
+      title: "Enfoque humano y personalizado",
+      desc: "Cada paciente recibe orientación clara, empatía y acompañamiento según su necesidad.",
     },
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white" aria-labelledby="why-title">
       <div className="max-w-7xl mx-auto px-6">
-
-        <h2 className="text-3xl font-bold text-center mb-12">
-          Why Choose Chikitsa
+        <h2 id="why-title" className="text-3xl font-bold text-center mb-12">
+          Por qué elegir LicenciadaTolmos
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-          {features.map((item, index) => (
-            <div
-              key={index}
+          {features.map((item) => (
+            <article
+              key={item.title}
               className="bg-gray-50 p-6 rounded-lg shadow text-center hover:shadow-lg transition"
             >
-
               <h3 className="text-xl font-semibold mb-3 text-green-600">
                 {item.title}
               </h3>
@@ -41,10 +38,8 @@ function WhyChoose() {
               <p className="text-gray-600">
                 {item.desc}
               </p>
-
-            </div>
+            </article>
           ))}
-
         </div>
       </div>
     </section>

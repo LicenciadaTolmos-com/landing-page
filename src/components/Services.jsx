@@ -1,49 +1,43 @@
-import React from "react";
-
 const services = [
   {
-    title: "Online Consultation",
-    description: "Talk to doctors from your home anytime.",
+    title: "Administración de tratamiento endovenoso, intramuscular y subcutáneo",
+    description: "Aplicación segura de medicamentos e inyectables a domicilio según indicación médica.",
   },
   {
-    title: "Health Checkups",
-    description: "Regular medical checkups for better health.",
+    title: "Control de funciones vitales",
+    description: "Monitoreo de presión arterial, pulso, temperatura, frecuencia respiratoria y oxigenación.",
   },
   {
-    title: "Emergency Care",
-    description: "24/7 emergency support from professionals.",
+    title: "Curación de lesiones por presión",
+    description: "Cuidado de escaras y lesiones por presión con técnica limpia, seguimiento y prevención de complicaciones.",
   },
   {
-    title: "Specialist Doctors",
-    description: "Consult experienced specialist doctors.",
+    title: "Colocación de sonda nasogástrica",
+    description: "Procedimiento profesional para alimentación, drenaje y cuidado seguro del paciente en casa.",
   },
   {
-    title: "Lab Tests",
-    description: "Book medical lab tests easily online.",
-  },
-  {
-    title: "Medicine Delivery",
-    description: "Get medicines delivered to your home.",
+    title: "Curación de heridas y ostomías",
+    description: "Limpieza, curación y acompañamiento especializado para heridas quirúrgicas, crónicas y ostomías.",
   },
 ];
 
 const Services = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50" aria-labelledby="services-title">
       <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-10">Our Services</h2>
+        <h2 id="services-title" className="text-3xl font-bold mb-10">Servicios de enfermería</h2>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-xl shadow hover:shadow-lg hover:-translate-y-1 transition "
+          {services.map((service) => (
+            <article
+              key={service.title}
+              className="bg-white p-6 rounded-xl shadow hover:shadow-lg hover:-translate-y-1 transition"
             >
               <h3 className="text-xl font-semibold mb-2">
                 {service.title}
               </h3>
               <p className="text-gray-600">{service.description}</p>
-            </div>
+            </article>
           ))}
         </div>
       </div>
