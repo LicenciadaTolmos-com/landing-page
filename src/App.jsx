@@ -2,6 +2,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 
 import Home from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
@@ -34,6 +35,7 @@ function App() {
       </main>
 
       <Footer />
+      <WhatsAppFloat />
     </BrowserRouter>
   );
 }
